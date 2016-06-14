@@ -180,6 +180,7 @@ class redis::sentinel (
   $working_dir            = $::redis::params::sentinel_working_dir,
   $notification_script    = $::redis::params::sentinel_notification_script,
   $client_reconfig_script = $::redis::params::sentinel_client_reconfig_script,
+  $bind                   = undef
 ) inherits redis::params {
 
   unless defined(Package[$package_name]) {
